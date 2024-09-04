@@ -18,4 +18,6 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
 
     //Buscar producto por nombre y precio
     List<Producto> findByNombreAndPrecioVenta(String nombre, Integer precioVenta);
+
+    //
 }
