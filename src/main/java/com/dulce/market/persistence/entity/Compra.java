@@ -31,7 +31,7 @@ public class Compra {
     private Cliente cliente;
 
     //Tener toda la lista de productos que pertenece a una compra
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<ComprasProducto> productos;
 
     public Integer getIdCompra() {
@@ -80,5 +80,21 @@ public class Compra {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
     }
 }

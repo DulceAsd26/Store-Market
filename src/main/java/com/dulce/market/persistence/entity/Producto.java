@@ -30,7 +30,7 @@ public class Producto {
     @ManyToOne //De muchos a uno
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false) //A traves de esta relacion no vamos a actualizar ni borrar una nueva categoria
     private Categoria categoria;
-    //Todo esto recupera a que categoria pertenece el producto
+
 
 
 
@@ -89,5 +89,13 @@ public class Producto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
